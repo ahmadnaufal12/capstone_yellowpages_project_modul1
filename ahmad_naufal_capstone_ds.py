@@ -17,10 +17,7 @@ dataYellowPages = [
     {"kode": "4", "Sektor": "Jasa", "Nama": "Kita Loundry", "Alamat": "Jl. Sawi No. 8", "Nomor Telepon": "087634567890", "Kota": "Yogyakarta", "Status": "Aktif"}
 ]
 
-# Daftar penyimpanan sementara
-temporary_backup = []
-
-
+# Fungsi validasi input
 def validate_sector(sector):
     return sector.isalpha()
 def validate_name(name):
@@ -31,7 +28,6 @@ def validate_phone(phone):
     return phone.isdigit() and len(phone) >= 10
 def validate_city(city):
     return all(part.isalpha() for part in city.split())
-
 # Daftar penyimpanan sementara
 temporary_backup = []
 
@@ -322,17 +318,6 @@ def backup_data():
         else:
             print('\nOpsi tidak tersedia, silahkan input angka 1-4\n')
 
-# Fungsi validasi input
-def validate_sector(sector):
-    return sector.isalpha()
-def validate_name(name):
-    return all(part.isalpha() for part in name.split())
-def validate_address(address):
-    return len(address) >= 5
-def validate_phone(phone):
-    return phone.isdigit() and len(phone) >= 10
-def validate_city(city):
-    return all(part.isalpha() for part in city.split())
 
 # Start the program
 menu_utama()
